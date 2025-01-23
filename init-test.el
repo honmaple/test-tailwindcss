@@ -28,7 +28,7 @@
   :mode
   ("\\.\\(vue\\|xml\\|html?\\)$" . web-mode))
 
-(defvar maple-lsp 'lsp-mode)
+(defvar maple-lsp 'lsp-bridge)
 
 (pcase maple-lsp
   ('eglot

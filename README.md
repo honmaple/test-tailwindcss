@@ -11,6 +11,7 @@ git clone https://github.com/honmaple/test-tailwindcss
 ```
 cd test-tailwindcss
 npm install
+npm install -g @tailwindcss/language-server
 ```
 
 3. 修改 `init-test.el`
@@ -18,6 +19,7 @@ npm install
 (defvar maple-lsp 'lsp-bridge)
 ;; (defvar maple-lsp 'eglot)
 ;; (defvar maple-lsp 'lsp-mode)
+;; lsp-mode 需要执行 lsp-install-server
 ```
 
 4. 设置 **lsp-bridge** 的 `load-path`和`lsp-bridge-python-command`
