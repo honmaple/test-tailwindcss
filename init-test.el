@@ -66,21 +66,14 @@
      :custom
      (acm-enable-yas nil)
      (lsp-bridge-python-command (expand-file-name "versions/lsp-bridge/bin/python3" (getenv "PYENV_ROOT")))
-     (lsp-bridge-multi-lang-server-mode-list
-      '(((web-mode) . "html_tailwindcss")))
+     (lsp-bridge-single-lang-server-mode-list
+      '(((web-mode) . "tailwindcss")))
      (lsp-bridge-get-language-id
       (lambda (project-path file-path server-name extension-name)
         (when (string-equal server-name "tailwindcss")
           (cond ((string-equal extension-name "html") "html")
                 ((string-equal extension-name "vue") "vue")
-                (t ""))))
-      )
-     ;; (lsp-bridge-enable-completion-in-string t)
-     ;; (lsp-bridge-multi-lang-server-extension-list
-     ;;  '(
-     ;;    (("vue")  . "html_tailwindcss")
-     ;;    (("html") . "html_tailwindcss")))
-
+                (t "")))))
      )))
 
 (provide 'init)
