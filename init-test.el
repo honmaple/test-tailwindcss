@@ -68,6 +68,9 @@
      (lsp-bridge-python-command (expand-file-name "versions/lsp-bridge/bin/python3" (getenv "PYENV_ROOT")))
      (lsp-bridge-single-lang-server-mode-list
       '(((web-mode) . "tailwindcss")))
+     (lsp-bridge-single-lang-server-extension-list nil)
+     (lsp-bridge-multi-lang-server-mode-list nil)
+     (lsp-bridge-multi-lang-server-extension-list nil)
      (lsp-bridge-get-language-id
       (lambda (project-path file-path server-name extension-name)
         (when (string-equal server-name "tailwindcss")
